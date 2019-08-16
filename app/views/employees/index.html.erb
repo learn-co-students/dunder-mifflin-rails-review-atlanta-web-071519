@@ -1,0 +1,12 @@
+<h1>List of Employees</h1>
+
+<div>
+    <% @employees.each do |employee| %>
+        <div><%= link_to(employee.full_name, employee_path(employee)) %></div><br>
+    <% end %>
+</div>
+
+<br>
+<br>
+
+<%= button_to "List of Dogs", dogs_path, method: :get %>
